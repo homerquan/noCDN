@@ -165,7 +165,7 @@ var img = new Image();
 img.onload = function () {
   canvas.width = img.width;
   canvas.height = img.height;
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0, 500,600);
   var data = canvas.toDataURL("image/jpeg");
   eachActiveConnection(function(c) {
     c.send(data);
